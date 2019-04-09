@@ -16,7 +16,7 @@ import rxjava.dyw.com.rxjavakj.netutils.BaseResponse;
  * Created by wdy on 2019/3/13.
  */
 
-public interface HomeApi {
+public interface HomeApiService {
     /**
      * 获取评论列表
      *

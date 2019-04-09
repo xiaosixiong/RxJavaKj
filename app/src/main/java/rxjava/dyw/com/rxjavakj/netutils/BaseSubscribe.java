@@ -12,8 +12,8 @@ import io.reactivex.schedulers.Schedulers;
 public class BaseSubscribe {
 
     protected <T> void toDetachAndSubscribe(Observable<? extends BaseResponse<T>> observable, ResponseListener<T> listener) {
-        Observable<DataAndMessage<T>> detachedbservable = detachDataAndMessageFrom(observable);
-        detachedbservable
+        Observable<DataAndMessage<T>> detachedObservable = detachDataAndMessageFrom(observable);
+        detachedObservable
                 .subscribeOn(Schedulers.io())
                 .unsubscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
